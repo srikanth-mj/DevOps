@@ -11,7 +11,10 @@
 8. Git has three areas namely working directory, staging area and committed area.
 9. Use "git status" command to see the untracked files. Use "git add 'file_name'" command to add the files to staging area. And finally use "git commit -m 'commit message'" to commit to repository.
 10. We can use "git commit -am 'commit message'" to both add and commit at the same time. Use "git log" command to see the history of commits on a branch.
-11. HEAD always points to the current branch latest commit and we can see it under .git directory at ".git/HEAD". For each branch there will HEAD related files under .git/refs/heads/'branch_name'.
-12. Another variation of "git log" is "git log --pretty".
-13. 
-   
+11. "git commit" command will commit all changes and open up default editor for providing the commit message.
+12. HEAD always points to the current branch latest commit and we can see it under .git directory at ".git/HEAD". For each branch there will HEAD related files under .git/refs/heads/'branch_name'.
+13. Another variation of "git log" is "git log --pretty".
+14. Git basic workflow is work on changes, add changes to staging area, and then commit to repository.
+15. Keep git commits as atomic as possible.
+16. A .gitignore file ignores the specified pattern files from tracking. A line starting with # serves as a comment. prefix "!" which negates the pattern. The slash "/" is used as the directory separator. An asterisk "*" matches anything except a slash. The character "?" matches any one character except "/". Two consecutive asterisks ("**") in patterns matched against full pathname. To stop tracking a file that is currently tracked, use 'git rm --cached file_name' to remove the file from the index.
+17.    
