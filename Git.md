@@ -18,3 +18,10 @@
 15. Keep git commits as atomic as possible.
 16. A .gitignore file ignores the specified pattern files from tracking. A line starting with # serves as a comment. prefix "!" which negates the pattern. The slash "/" is used as the directory separator. An asterisk "*" matches anything except a slash. The character "?" matches any one character except "/". Two consecutive asterisks ("**") in patterns matched against full pathname. To stop tracking a file that is currently tracked, use 'git rm --cached file_name' to remove the file from the index.
 17. To amend an immediate commit use command "git commit --amend". sequence is git commit, then add forgotten files using git add, then git commit --amend.
+18. In git default branch name is called master. In 2020, Github renamed the default branch from master to main. But Git still calls it master.
+19. We can view all branches using "git branch" command. current branch is shown with an asterisk.
+20. "git branch 'branch_name'" creates a new branch based on upon the current HEAD but it doesn't switch to that branch. To switch branches use command "git switch 'branch_name'". We can also use "git checkout 'branch_name'" to switch branches as well but it's legacy.
+21. To create a branch and then switch immediately use the command "git branch -c 'branch_name'" or "git checkout -b 'branch_name'".
+22. If we have un-committed changes which are common across branches then if we switch branches they'll follow to new branch.
+23. Use "git branch -d 'branch_name'" to delete a branch. Switch to other branch before performing this operation. Use "git branch -D 'branch_name'" for force delete.
+24. To rename a branch, switch to the branch and then use command "git branch -m 'new_branch_name'". 
