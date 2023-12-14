@@ -17,4 +17,4 @@
 14. Git basic workflow is work on changes, add changes to staging area, and then commit to repository.
 15. Keep git commits as atomic as possible.
 16. A .gitignore file ignores the specified pattern files from tracking. A line starting with # serves as a comment. prefix "!" which negates the pattern. The slash "/" is used as the directory separator. An asterisk "*" matches anything except a slash. The character "?" matches any one character except "/". Two consecutive asterisks ("**") in patterns matched against full pathname. To stop tracking a file that is currently tracked, use 'git rm --cached file_name' to remove the file from the index.
-17.    
+17. To amend an immediate commit use command "git commit --amend". sequence is git commit, then add forgotten files using git add, then git commit --amend.
