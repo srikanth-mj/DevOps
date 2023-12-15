@@ -32,6 +32,23 @@
 27. A fast-forward merge happens when master/main/trunk catches up with a feature branch by some commits assuming no commits happened on master branch after creating feature branch.
 28. When master had commits after creating feature branch, and when we try merging both, a merge commit happens and git prompts for merge commit message in configured editor.
 29. When a file is modified at the same place on two different  branches or when a file is modified on one branch but deleted in some other branch, in these cases when we try and merge these branches, there will be conflicts which git cannot resolve on its own.
-30. Conflict Markers are used to highlight the problematic lines in code. Text between **<<<HEAD and ===** comes from recipient branch. Text between === and >>> comes from merging branch.
+30. Conflict Markers are used to highlight the problematic lines in code. Text between **<<<HEAD and ===** comes from recipient branch. Text between **=== and >>>** comes from merging branch.
 31. Open up the files with conflicts, edit the files to remove conflicts, remove the conflict markers in the doc, then add and commit changes.
-32. 
+
+### Git diff
+1. Without any additional options **git diff** lists all the changes in our working directory that are not staged for the next commit.
+2. **git diff** is used generally to compare two same files.
+3. Git declares one file as **A** and the other as **B**.
+4. A diff shows only portions or chunks that were modified but also includes some unchanged lines before and after to provide context.
+5. Each chunk starts with a chunk header found between **@@ and @@**. For example, @@ -3,4 +3,5 @@.
+6. From file A, 4 lines are extracted starting from line 3. From file B, 5 lines are extracted starting from line 3.
+7. Every line that changed between the 2 files is marked eith a + or - symbol.
+8. Lines that begin with - come from file A and lines that begin with + come from file B.
+9. git diff to see changes between working directory and staging area.
+10. git diff HEAD to see changes between working directory, staging area and repository.
+11. git diff -staged or --cached to see the difference between staging area and out last commit.
+12. git diff --staged 'file_name' we can view the changes within a specific file by providing.
+13. git diff branch1..branch2 compare two branches
+14. git diff commit..commit compare two commits.
+
+### Git Stash
