@@ -30,13 +30,13 @@
 
 ### Git merge
     
-26. We merge branches, not specific commits. We always mege to the current HEAD branch.
-27. To merge 2 branches, first switch to the receiving branch Ex. master/main/trunk and then run command "git merge 'feature_branch_name'". This will merge code from feature_branch_name to main/mater/trunk.
-28. A fast-forward merge happens when master/main/trunk catches up with a feature branch by some commits assuming no commits happened on master branch after creating feature branch.
-29. When master had commits after creating feature branch, and when we try merging both, a merge commit happens and git prompts for merge commit message in configured editor.
-30. When a file is modified at the same place on two different  branches or when a file is modified on one branch but deleted in some other branch, in these cases when we try and merge these branches, there will be conflicts which git cannot resolve on its own.
-31. Conflict Markers are used to highlight the problematic lines in code. Text between **<<<HEAD and ===** comes from recipient branch. Text between **=== and >>>** comes from merging branch.
-32. Open up the files with conflicts, edit the files to remove conflicts, remove the conflict markers in the doc, then add and commit changes.
+1. We merge branches, not specific commits. We always mege to the current HEAD branch.
+2. To merge 2 branches, first switch to the receiving branch Ex. master/main/trunk and then run command "git merge 'feature_branch_name'". This will merge code from feature_branch_name to main/mater/trunk.
+3. A fast-forward merge happens when master/main/trunk catches up with a feature branch by some commits assuming no commits happened on master branch after creating feature branch.
+4. When master had commits after creating feature branch, and when we try merging both, a merge commit happens and git prompts for merge commit message in configured editor.
+5. When a file is modified at the same place on two different  branches or when a file is modified on one branch but deleted in some other branch, in these cases when we try and merge these branches, there will be conflicts which git cannot resolve on its own.
+6. Conflict Markers are used to highlight the problematic lines in code. Text between **<<<HEAD and ===** comes from recipient branch. Text between **=== and >>>** comes from merging branch.
+7. Open up the files with conflicts, edit the files to remove conflicts, remove the conflict markers in the doc, then add and commit changes.
 
 ### Git diff
 1. Without any additional options **git diff** lists all the changes in our working directory that are not staged for the next commit.
@@ -55,3 +55,17 @@
 14. git diff commit..commit compare two commits.
 
 ### Git Stash
+1. Use **git stash** to temporarily stash/shelve changes made to working copy so that we can work on something else.
+2. Commands related to stashing are **git stash**, **git stash list**, **git stash save**, **git statsh pop**, **git stash apply**, **git stash pop stash@{2}**, **git stash show**, **git stash drop stash@{1}**, and **git stash clear**.
+
+### Git checkout
+1. Use **git checkout** to checkout a particular commit by providing commit hash to it.
+2. Now, we wiil be in detached HEAD mode. HEAD always points to a branch and Branch to latest commit. In detached HEAD mode, branch and HEAD will be in different places.
+3. From the commit point we can start a new branch using **git switch -c 'branch_name**.
+4. Another way to refer to previous commits is to use **git checkout HEAD~1** and similarly **HEAD~2** etc..
+5. To switch back to previous branch simply use **git switch -**.
+6. To revert the file back to whatever it looked like when last committed, we can use **git checkout HEAD 'filename'** to discard any changes in that file, reverting back to the HEAD.
+7. Another option instead of using HEAD is substitute -- followed by the file(s) names like **git checkout -- 'file_name'**.
+8. 
+
+
