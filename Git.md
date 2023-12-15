@@ -28,4 +28,4 @@
 25. We merge branches, not specific commits. We always mege to the current HEAD branch.
 26. To merge 2 branches, first switch to the receiving branch Ex. master/main/trunk and then run command "git merge 'feature_branch_name'". This will merge code from feature_branch_name to main/mater/trunk.
 27. A fast-forward merge happens when master/main/trunk catches up with a feature branch by some commits assuming no commits happened on master branch after creating feature branch.
-28. 
+28. When master had commits after creating feature branch, and when we merge both a merge commit happens and git prompts for merge commit message in configured editor.
