@@ -27,13 +27,16 @@
 22. If we have un-committed changes which are common across branches then if we switch branches they'll follow to new branch.
 23. Use "git branch -d 'branch_name'" to delete a branch. Switch to other branch before performing this operation. Use "git branch -D 'branch_name'" for force delete.
 24. To rename a branch, switch to the branch and then use command "git branch -m 'new_branch_name'".
-25. We merge branches, not specific commits. We always mege to the current HEAD branch.
-26. To merge 2 branches, first switch to the receiving branch Ex. master/main/trunk and then run command "git merge 'feature_branch_name'". This will merge code from feature_branch_name to main/mater/trunk.
-27. A fast-forward merge happens when master/main/trunk catches up with a feature branch by some commits assuming no commits happened on master branch after creating feature branch.
-28. When master had commits after creating feature branch, and when we try merging both, a merge commit happens and git prompts for merge commit message in configured editor.
-29. When a file is modified at the same place on two different  branches or when a file is modified on one branch but deleted in some other branch, in these cases when we try and merge these branches, there will be conflicts which git cannot resolve on its own.
-30. Conflict Markers are used to highlight the problematic lines in code. Text between **<<<HEAD and ===** comes from recipient branch. Text between **=== and >>>** comes from merging branch.
-31. Open up the files with conflicts, edit the files to remove conflicts, remove the conflict markers in the doc, then add and commit changes.
+
+### Git merge
+    
+26. We merge branches, not specific commits. We always mege to the current HEAD branch.
+27. To merge 2 branches, first switch to the receiving branch Ex. master/main/trunk and then run command "git merge 'feature_branch_name'". This will merge code from feature_branch_name to main/mater/trunk.
+28. A fast-forward merge happens when master/main/trunk catches up with a feature branch by some commits assuming no commits happened on master branch after creating feature branch.
+29. When master had commits after creating feature branch, and when we try merging both, a merge commit happens and git prompts for merge commit message in configured editor.
+30. When a file is modified at the same place on two different  branches or when a file is modified on one branch but deleted in some other branch, in these cases when we try and merge these branches, there will be conflicts which git cannot resolve on its own.
+31. Conflict Markers are used to highlight the problematic lines in code. Text between **<<<HEAD and ===** comes from recipient branch. Text between **=== and >>>** comes from merging branch.
+32. Open up the files with conflicts, edit the files to remove conflicts, remove the conflict markers in the doc, then add and commit changes.
 
 ### Git diff
 1. Without any additional options **git diff** lists all the changes in our working directory that are not staged for the next commit.
