@@ -66,6 +66,12 @@
 5. To switch back to previous branch simply use **git switch -**.
 6. To revert the file back to whatever it looked like when last committed, we can use **git checkout HEAD 'filename'** to discard any changes in that file, reverting back to the HEAD.
 7. Another option instead of using HEAD is substitute -- followed by the file(s) names like **git checkout -- 'file_name'**.
-8. 
+
+### Git Restore
+1. Git restore is a brand new Git command along with git switch that helps with undoing operations.
+2. **git restore 'file_name'** to restore a file from HEAD.
+3. **git restore --source HEAD~1 app.js** to restore app.js from 2 commits back.
+4. We can use **git restore** to also un-stage files. If a file is accidentally added to staging area with git add, we can use git restore to remove it from staging. **git restore --staged app.js**.
+5. 
 
 
