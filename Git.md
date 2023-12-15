@@ -30,6 +30,6 @@
 27. A fast-forward merge happens when master/main/trunk catches up with a feature branch by some commits assuming no commits happened on master branch after creating feature branch.
 28. When master had commits after creating feature branch, and when we try merging both, a merge commit happens and git prompts for merge commit message in configured editor.
 29. When a file is modified at the same place on two different  branches or when a file is modified on one branch but deleted in some other branch, in these cases when we try and merge these branches, there will be conflicts which git cannot resolve on its own.
-30. Conflict Markers are used to highlight the problematic lines in code. Text between <<<HEAD and === comes from recipient branch. Text between === and >>> comes from merging branch.
+30. Conflict Markers are used to highlight the problematic lines in code. Text between **<<<HEAD and ===** comes from recipient branch. Text between === and >>> comes from merging branch.
 31. Open up the files with conflicts, edit the files to remove conflicts, remove the conflict markers in the doc, then add and commit changes.
 32. 
