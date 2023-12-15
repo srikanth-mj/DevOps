@@ -72,6 +72,14 @@
 2. **git restore 'file_name'** to restore a file from HEAD.
 3. **git restore --source HEAD~1 app.js** to restore app.js from 2 commits back.
 4. We can use **git restore** to also un-stage files. If a file is accidentally added to staging area with git add, we can use git restore to remove it from staging. **git restore --staged app.js**.
-5. 
+
+### Git Reset
+1. Suppose if we made a couple of commits on the master branch when we actually wanted to make them on a separate branch we can use **git reset** command.
+2. Reset back to a specific commit using **git reset 'commit_hash'**. This is a normal reset. Undoing certain commits. Those changes will be moved to working directory. Work will remain so that we can apply to a different branch.
+3. Hard reset if we want to undo both the commits and the actual changes in files. Example, **git reset --hard 'commit'**.
+
+### Git Revert
+1. git revert is similar to git reset as both undo changes. git reset actually moves the branch pointer backwards eliminating commits. git revert instead creates a brand new commit which reverses the changes from a commit. Because it results in a new commit, you will be prompted to enter a commit message.
+2. **git revert 'hash'** to revert changes.
 
 
