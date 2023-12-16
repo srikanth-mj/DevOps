@@ -28,7 +28,7 @@
 23. Use "git branch -d 'branch_name'" to delete a branch. Switch to other branch before performing this operation. Use "git branch -D 'branch_name'" for force delete.
 24. To rename a branch, switch to the branch and then use command "git branch -m 'new_branch_name'".
 
-### Git merge
+### Git Merge
     
 1. We merge branches, not specific commits. We always mege to the current HEAD branch.
 2. To merge 2 branches, first switch to the receiving branch Ex. master/main/trunk and then run command "git merge 'feature_branch_name'". This will merge code from feature_branch_name to main/mater/trunk.
@@ -38,7 +38,7 @@
 6. Conflict Markers are used to highlight the problematic lines in code. Text between **<<<HEAD and ===** comes from recipient branch. Text between **=== and >>>** comes from merging branch.
 7. Open up the files with conflicts, edit the files to remove conflicts, remove the conflict markers in the doc, then add and commit changes.
 
-### Git diff
+### Git Diff
 1. Without any additional options **git diff** lists all the changes in our working directory that are not staged for the next commit.
 2. **git diff** is used generally to compare two same files.
 3. Git declares one file as **A** and the other as **B**.
@@ -58,7 +58,7 @@
 1. Use **git stash** to temporarily stash/shelve changes made to working copy so that we can work on something else.
 2. Commands related to stashing are **git stash**, **git stash list**, **git stash save**, **git statsh pop**, **git stash apply**, **git stash pop stash@{2}**, **git stash show**, **git stash drop stash@{1}**, and **git stash clear**.
 
-### Git checkout
+### Git Checkout
 1. Use **git checkout** to checkout a particular commit by providing commit hash to it.
 2. Now, we wiil be in detached HEAD mode. HEAD always points to a branch and Branch to latest commit. In detached HEAD mode, branch and HEAD will be in different places.
 3. From the commit point we can start a new branch using **git switch -c 'branch_name**.
@@ -81,5 +81,20 @@
 ### Git Revert
 1. git revert is similar to git reset as both undo changes. git reset actually moves the branch pointer backwards eliminating commits. git revert instead creates a brand new commit which reverses the changes from a commit. Because it results in a new commit, you will be prompted to enter a commit message.
 2. **git revert 'hash'** to revert changes.
+
+### Git Clone
+1. Use **git clone** to clone a remote repository. By default, remote repo is saved with the name origin.
+2. Use **git remote** or **git remote -v** to list remote repo details.
+3. When **git clone** is used, it automatically sets up the remote repo details in local.
+
+### Git Remote
+1. Another way to connect local repo with remote repo is by using **git remote add** command.
+2. Run **git remote add 'name' 'URL'** to connect local repo with remote repo using the URL.
+3. We can rename remote repo using **git remote rename 'old' 'new'** and delete remote repo connection using **git remote remove 'name'**.
+
+### Git Push
+1. Used to push code from local to remote repo.
+2. Run **git push 'remotename(like origin)' 'branch_name'** like git push origin master.
+3. 
 
 
